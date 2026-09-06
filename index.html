@@ -3,37 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidades Inteligentes</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Singapura: A Cidade Inteligente</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
     <header>
-        <h1>Cidades Inteligentes</h1>
-        <p>O futuro da urbanização e tecnologia</p>
+        <h1>Singapura: O Futuro da Cidade Inteligente</h1>
+        <p>Inovação, tecnologia e sustentabilidade urbana em um só lugar.</p>
+        <nav class="menu">
+            <a href="#singapura">Por que Singapura?</a>
+            <a href="#outras-cidades">Outras Cidades</a>
+            <a href="#quiz">Avalie sua Cidade</a>
+        </nav>
     </header>
 
     <main>
-        <section class="card">
-            <h2>O que são?</h2>
-            <p>São áreas urbanas que utilizam tecnologia, dados e conectividade para melhorar a qualidade de vida e a sustentabilidade.</p>
-        </section>
-
-        <section class="card">
-            <h2>Pilares Principais</h2>
-            <ul>
-                <li>Mobilidade Sustentável</li>
-                <li>Energia Renovável</li>
-                <li>Gestão Inteligente de Resíduos</li>
+        <section id="singapura" class="card">
+            <h2>Por que Singapura é uma referência global?</h2>
+            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80" alt="Vista da Marina Bay em Singapura com arquitetura moderna e vegetação" class="img-destaque">
+            <p>Singapura é frequentemente eleita a cidade mais inteligente do mundo no índice da <strong>IMD Smart City Index</strong>. A cidade-estado transformou-se em um laboratório vivo de tecnologia graças a uma visão integrada de planejamento urbano.</p>
+            
+            <h3>O que faz de Singapura uma Cidade Inteligente?</h3>
+            <ul class="lista-pilares">
+                <li><strong>Gêmeo Digital (Virtual Singapore):</strong> Um modelo 3D dinâmico que simula o fluxo de vento, luz solar e tráfego para testar soluções antes de construí-las no mundo real.</li>
+                <li><strong>Mobilidade Autônoma:</strong> Testes avançados e uso de ônibus e táxis autônomos elétricos para integrar o transporte público.</li>
+                <li><strong>Gestão de Recursos (NEWater):</strong> Sistema de reciclagem avançada de água e dessalinização para garantir segurança hídrica sustentável.</li>
+                <li><strong>Jardins Verticais e Bioclimática:</strong> O projeto "Cidade em um Jardim" conecta a natureza à tecnologia (como as Superárvores do <em>Gardens by the Bay</em>).</li>
             </ul>
         </section>
 
-        <section class="card">
-            <h2>Interatividade</h2>
-            <button id="btnMensagem">Clique para ver uma dica</button>
-            <p id="mensagem"></p>
+        <section id="outras-cidades" class="card">
+            <h2>Outras Cidades de Destaque no Mundo</h2>
+            <div class="grid-cidades">
+                <div class="cidade-box">
+                    <h3>Curitiba (Brasil)</h3>
+                    <p>Referência na América Latina em transporte público intermodal (BRT), reciclagem de resíduos com o programa "Câmbio Verde" e inovação urbana inteligente.</p>
+                </div>
+                <div class="cidade-box">
+                    <h3>Barcelona (Espanha)</h3>
+                    <p>Uso ostensivo de rede de sensores IoT para iluminação pública inteligente, irrigação otimizada em parques e o projeto das "Superquadras" para pedestres.</p>
+                </div>
+                <div class="cidade-box">
+                    <h3>Tóquio (Japão)</h3>
+                    <p>Infraestrutura ultra-resistente contra desastres naturais, automação em larga escala, mobilidade sobre trilhos hiper-eficiente e energia limpa.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="card">
+            <h2>Sua cidade é inteligente? Faça o teste!</h2>
+            <p>Preencha os dados e responda às 8 perguntas abaixo (Sim/Não) para avaliar o nível de maturidade urbana do seu município.</p>
+            
+            <form id="quiz-form">
+                <div class="campo-grupo">
+                    <label for="nomeCidade"><strong>Qual é o nome da sua cidade?</strong></label>
+                    <input type="text" id="nomeCidade" placeholder="Ex: Curitiba, São Paulo, Recife..." required>
+                </div>
+
+                <ol class="lista-perguntas">
+                    <li>Sua cidade possui aplicativo público ou portal funcional para solicitação de serviços de manutenção urbana?</li>
+                    <li>O transporte público conta com rastreamento por GPS em tempo real disponível para os passageiros?</li>
+                    <li>Existem semáforos inteligentes ou monitoramento de tráfego centralizado por câmeras/IA?</li>
+                    <li>Há pontos de coleta seletiva organizados ou reciclagem abrangente em grande parte do município?</li>
+                    <li>Sua cidade conta com sensores de monitoramento climático/de enchentes interligados à defesa civil?</li>
+                    <li>É possível acessar Wi-Fi público gratuito nas principais praças ou terminais de ônibus?</li>
+                    <li>A iluminação pública utiliza tecnologia LED e/ou sensores automatizados em áreas urbanas?</li>
+                    <li>Sua prefeitura oferece serviços digitais e desburocratizados (ex: emissão de alvarás e certidões 100% online)?</li>
+                </ol>
+
+                <p><strong>Marque abaixo as respostas para as 8 perguntas acima:</strong></p>
+                <div class="respostas-grid">
+                    <div class="pergunta-item"><span>Perg. 1:</span> <label><input type="radio" name="p1" value="sim" required> Sim</label> <label><input type="radio" name="p1" value="nao"> Não</label></div>
+                    <div class="pergunta-item"><span>Perg. 2:</span> <label><input type="radio" name="p2" value="sim" required> Sim</label> <label><input type="radio" name="p2" value="nao"> Não</label></div>
+                    <div class="pergunta-item"><span>Perg. 3:</span> <label><input type="radio" name="p3" value="sim" required> Sim</label> <label><input type="radio" name="p3" value="nao"> Não</label></div>
+                    <div class="pergunta-item"><span>Perg. 4:</span> <label><input type="radio" name="p4" value="sim" required> Sim</label> <label><input type="radio" name="p4" value="nao"> Não</label></div>
+                    <div class="pergunta-item"><span>Perg. 5:</span> <label><input type="radio" name="p5" value="sim" required> Sim</label> <label><input type="radio" name="p5" value="nao"> Não</label></div>
+                    <div class="pergunta-item"><span>Perg. 6:</span> <label><input type="radio" name="p6" value="sim" required> Sim</label> <label><input type="radio" name="p6" value="nao"> Não</label></div>
+                    <div class="pergunta-item"><span>Perg. 7:</span> <label><input type="radio" name="p7" value="sim" required> Sim</label> <label><input type="radio" name="p7" value="nao"> Não</label></div>
+                    <div class="pergunta-item"><span>Perg. 8:</span> <label><input type="radio" name="p8" value="sim" required> Sim</label> <label><input type="radio" name="p8" value="nao"> Não</label></div>
+                </div>
+
+                <button type="button" id="btnCalcular">Analisar Minha Cidade</button>
+            </form>
+
+            <div id="resultado" class="resultado-box hidden"></div>
         </section>
     </main>
+
+    <footer>
+        <p>Desenvolvido para o Projeto sobre Cidades Inteligentes | Singapura &copy; 2026</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
