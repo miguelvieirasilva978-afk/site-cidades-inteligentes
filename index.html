@@ -9,87 +9,130 @@
 <body>
 
     <header>
-        <h1>Singapura: O Futuro da Cidade Inteligente</h1>
-        <p>Inovação, tecnologia e sustentabilidade urbana em um só lugar.</p>
+        <h1>Singapura: O Futuro das Cidades Inteligentes</h1>
+        <p>Inovação, governança digital e sustentabilidade urbana em escala global</p>
         <nav class="menu">
-            <a href="#singapura">Por que Singapura?</a>
-            <a href="#outras-cidades">Outras Cidades</a>
-            <a href="#quiz">Avalie sua Cidade</a>
+            <a href="#sobre-singapura">Sobre Singapura</a>
+            <a href="#pilares">Pilares de Inovação</a>
+            <a href="#outras-cidades">Cidades Globais</a>
+            <button id="btnAbrirQuizHeader" class="btn-menu-highlight">Avaliar Minha Cidade</button>
         </nav>
     </header>
 
     <main>
-        <section id="singapura" class="card">
-            <h2>Por que Singapura é uma referência global?</h2>
-            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80" alt="Vista da Marina Bay em Singapura com arquitetura moderna e vegetação" class="img-destaque">
-            <p>Singapura é frequentemente eleita a cidade mais inteligente do mundo no índice da <strong>IMD Smart City Index</strong>. A cidade-estado transformou-se em um laboratório vivo de tecnologia graças a uma visão integrada de planejamento urbano.</p>
-            
-            <h3>O que faz de Singapura uma Cidade Inteligente?</h3>
-            <ul class="lista-pilares">
-                <li><strong>Gêmeo Digital (Virtual Singapore):</strong> Um modelo 3D dinâmico que simula o fluxo de vento, luz solar e tráfego para testar soluções antes de construí-las no mundo real.</li>
-                <li><strong>Mobilidade Autônoma:</strong> Testes avançados e uso de ônibus e táxis autônomos elétricos para integrar o transporte público.</li>
-                <li><strong>Gestão de Recursos (NEWater):</strong> Sistema de reciclagem avançada de água e dessalinização para garantir segurança hídrica sustentável.</li>
-                <li><strong>Jardins Verticais e Bioclimática:</strong> O projeto "Cidade em um Jardim" conecta a natureza à tecnologia (como as Superárvores do <em>Gardens by the Bay</em>).</li>
-            </ul>
+        <!-- Banner Principal e Chamada pro Quiz -->
+        <section class="hero-card">
+            <div class="hero-content">
+                <h2>Sua cidade é inteligente como Singapura?</h2>
+                <p>Faça a nossa avaliação interativa e descubra o nível de maturidade e tecnologia do seu município em poucos segundos.</p>
+                <button id="btnAbrirQuizHero" class="btn-cta-principal">Iniciar Teste da Cidade</button>
+            </div>
         </section>
 
-        <section id="outras-cidades" class="card">
-            <h2>Outras Cidades de Destaque no Mundo</h2>
-            <div class="grid-cidades">
-                <div class="cidade-box">
-                    <h3>Curitiba (Brasil)</h3>
-                    <p>Referência na América Latina em transporte público intermodal (BRT), reciclagem de resíduos com o programa "Câmbio Verde" e inovação urbana inteligente.</p>
+        <!-- Seção Principal sobre Singapura -->
+        <section id="sobre-singapura" class="card">
+            <h2>Por que Singapura lidera o ranking mundial de Smart Cities?</h2>
+            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1000&q=80" alt="Marina Bay Sands em Singapura" class="img-destaque">
+            
+            <p>Singapura é amplamente reconhecida como a cidade mais inteligente do planeta segundo o <em>Smart City Index</em> (IMD). A transformação da cidade-estado não é fruto do acaso, mas sim do programa governamental **Smart Nation**, lançado em 2014 com o objetivo de integrar tecnologia de ponta no cotidiano de toda a sociedade.</p>
+            
+            <p>Combinando sensores de Internet das Coisas (IoT), Inteligência Artificial e planejamento urbano focado no bem-estar humano, Singapura prova que densidade populacional e alta qualidade de vida podem andar juntas de forma sustentável.</p>
+
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="https://images.unsplash.com/photo-1508964942454-1a56651d54ac?auto=format&fit=crop&w=600&q=80" alt="Gardens by the Bay">
+                    <span>Gardens by the Bay: Arquitetura e Botânica</span>
                 </div>
-                <div class="cidade-box">
-                    <h3>Barcelona (Espanha)</h3>
-                    <p>Uso ostensivo de rede de sensores IoT para iluminação pública inteligente, irrigação otimizada em parques e o projeto das "Superquadras" para pedestres.</p>
-                </div>
-                <div class="cidade-box">
-                    <h3>Tóquio (Japão)</h3>
-                    <p>Infraestrutura ultra-resistente contra desastres naturais, automação em larga escala, mobilidade sobre trilhos hiper-eficiente e energia limpa.</p>
+                <div class="galeria-item">
+                    <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?auto=format&fit=crop&w=600&q=80" alt="Infraestrutura de Transporte em Singapura">
+                    <span>Mobilidade de alta precisão</span>
                 </div>
             </div>
         </section>
 
-        <section id="quiz" class="card">
-            <h2>Sua cidade é inteligente? Faça o teste!</h2>
-            <p>Preencha os dados e responda às 8 perguntas abaixo (Sim/Não) para avaliar o nível de maturidade urbana do seu município.</p>
+        <!-- Detalhes dos Pilares -->
+        <section id="pilares" class="card">
+            <h2>Os Pilares do Ecossistema de Singapura</h2>
             
-            <form id="quiz-form">
-                <div class="campo-grupo">
-                    <label for="nomeCidade"><strong>Qual é o nome da sua cidade?</strong></label>
-                    <input type="text" id="nomeCidade" placeholder="Ex: Curitiba, São Paulo, Recife..." required>
+            <div class="grid-pilares">
+                <div class="pilar-box">
+                    <h3>Virtual Singapore (Gêmeo Digital)</h3>
+                    <p>Um modelo 3D dinâmico do país inteiro alimentado em tempo real por dados de infraestrutura, tráfego e clima. Ele permite simular o impacto de novas construções na passagem de ventos, na incidência de luz solar e no fluxo de veículos antes mesmo de colocar o primeiro tijolo.</p>
                 </div>
 
-                <ol class="lista-perguntas">
-                    <li>Sua cidade possui aplicativo público ou portal funcional para solicitação de serviços de manutenção urbana?</li>
-                    <li>O transporte público conta com rastreamento por GPS em tempo real disponível para os passageiros?</li>
-                    <li>Existem semáforos inteligentes ou monitoramento de tráfego centralizado por câmeras/IA?</li>
-                    <li>Há pontos de coleta seletiva organizados ou reciclagem abrangente em grande parte do município?</li>
-                    <li>Sua cidade conta com sensores de monitoramento climático/de enchentes interligados à defesa civil?</li>
-                    <li>É possível acessar Wi-Fi público gratuito nas principais praças ou terminais de ônibus?</li>
-                    <li>A iluminação pública utiliza tecnologia LED e/ou sensores automatizados em áreas urbanas?</li>
-                    <li>Sua prefeitura oferece serviços digitais e desburocratizados (ex: emissão de alvarás e certidões 100% online)?</li>
-                </ol>
-
-                <p><strong>Marque abaixo as respostas para as 8 perguntas acima:</strong></p>
-                <div class="respostas-grid">
-                    <div class="pergunta-item"><span>Perg. 1:</span> <label><input type="radio" name="p1" value="sim" required> Sim</label> <label><input type="radio" name="p1" value="nao"> Não</label></div>
-                    <div class="pergunta-item"><span>Perg. 2:</span> <label><input type="radio" name="p2" value="sim" required> Sim</label> <label><input type="radio" name="p2" value="nao"> Não</label></div>
-                    <div class="pergunta-item"><span>Perg. 3:</span> <label><input type="radio" name="p3" value="sim" required> Sim</label> <label><input type="radio" name="p3" value="nao"> Não</label></div>
-                    <div class="pergunta-item"><span>Perg. 4:</span> <label><input type="radio" name="p4" value="sim" required> Sim</label> <label><input type="radio" name="p4" value="nao"> Não</label></div>
-                    <div class="pergunta-item"><span>Perg. 5:</span> <label><input type="radio" name="p5" value="sim" required> Sim</label> <label><input type="radio" name="p5" value="nao"> Não</label></div>
-                    <div class="pergunta-item"><span>Perg. 6:</span> <label><input type="radio" name="p6" value="sim" required> Sim</label> <label><input type="radio" name="p6" value="nao"> Não</label></div>
-                    <div class="pergunta-item"><span>Perg. 7:</span> <label><input type="radio" name="p7" value="sim" required> Sim</label> <label><input type="radio" name="p7" value="nao"> Não</label></div>
-                    <div class="pergunta-item"><span>Perg. 8:</span> <label><input type="radio" name="p8" value="sim" required> Sim</label> <label><input type="radio" name="p8" value="nao"> Não</label></div>
+                <div class="pilar-box">
+                    <h3>Mobilidade Inteligente & Autônoma</h3>
+                    <p>O sistema de transporte conta com câmeras de detecção de tráfego que alteram o tempo dos semáforos automaticamente. Além disso, a cidade possui distritos dedicados ao teste contínuo de táxis e ônibus elétricos 100% autônomos.</p>
                 </div>
 
-                <button type="button" id="btnCalcular">Analisar Minha Cidade</button>
-            </form>
+                <div class="pilar-box">
+                    <h3>Segurança Hídrica (NEWater)</h3>
+                    <p>Sem fontes de água suficientes, Singapura desenvolveu a tecnologia **NEWater**: um processo avançado de reciclagem de águas residuais e dessalinização que torna a água potável e supre mais de 40% das necessidades do país.</p>
+                </div>
 
-            <div id="resultado" class="resultado-box hidden"></div>
+                <div class="pilar-box">
+                    <h3>Governança Digital (Singpass)</h3>
+                    <p>Com o sistema de identidade digital **Singpass**, mais de 99% dos serviços governamentais são realizados online. Do pagamento de impostos à matrícula escolar ou abertura de empresas, tudo é resolvido via smartphone.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Outras Cidades -->
+        <section id="outras-cidades" class="card">
+            <h2>Outras Cidades Referência pelo Mundo</h2>
+            <p>O conceito de cidade inteligente varia de acordo com as necessidades e desafios de cada região:</p>
+            
+            <div class="grid-cidades">
+                <div class="cidade-box">
+                    <h3>Curitiba (Brasil)</h3>
+                    <p>Pioneira mundial no sistema de transporte de ônibus velozes em faixas exclusivas (BRT) e famosa pela gestão eficiente de resíduos e parques para drenagem natural de enchentes.</p>
+                </div>
+
+                <div class="cidade-box">
+                    <h3>Barcelona (Espanha)</h3>
+                    <p>Referência em sensores IoT urbanos que monitoram a qualidade do ar, gerenciam a irrigação de praças de acordo com a umidade do solo e controlam iluminação pública em tempo real.</p>
+                </div>
+
+                <div class="cidade-box">
+                    <h3>Tóquio (Japão)</h3>
+                    <p>Líder em resiliência contra terremotos e tufões, logística automatizada, rede de trens hiper-conectada e integração massiva de robótica nos serviços de atendimento ao público.</p>
+                </div>
+
+                <div class="cidade-box">
+                    <h3>Amsterdã (Holanda)</h3>
+                    <p>Destaca-se pela transição energética com foco em energias limpas, incentivo total ao transporte ciclístico e projetos de plataformas integradas de compartilhamento de energia nos bairros.</p>
+                </div>
+
+                <div class="cidade-box">
+                    <h3>Songdo (Coreia do Sul)</h3>
+                    <p>Uma cidade projetada do zero para ser inteligente. Conta com um sistema pneumático subterrâneo de coleta de lixo que dispensa caminhões na superfície e sensores por todas as ruas.</p>
+                </div>
+            </div>
         </section>
     </main>
+
+    <!-- Modal Flutuante do Quiz -->
+    <div id="quizModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="btnFecharModal" class="btn-fechar">&times;</button>
+            
+            <h2>Avaliação de Maturidade Urbana</h2>
+            <p class="subtitulo-modal">Responda ao questionário para analisar se sua cidade possui as características de uma Smart City.</p>
+
+            <form id="quiz-form">
+                <div class="campo-grupo">
+                    <label for="nomeCidade"><strong>Digite o nome da sua cidade:</strong></label>
+                    <input type="text" id="nomeCidade" placeholder="Ex: Curitiba, São Paulo, Lisboa..." required>
+                </div>
+
+                <div id="perguntasContainer">
+                    <!-- As perguntas serão geradas e exibidas aqui via JS -->
+                </div>
+
+                <div id="resultado" class="resultado-box hidden"></div>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <p>Desenvolvido para o Projeto sobre Cidades Inteligentes | Singapura &copy; 2026</p>
