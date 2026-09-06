@@ -4,175 +4,365 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6f8;
-    color: #2c3e50;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
+/* Header e Menu */
 header {
-    background-color: #1e293b;
+    background-color: #0f172a;
     color: #ffffff;
     text-align: center;
-    padding: 2.5rem 1rem 1.5rem;
+    padding: 2rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.2rem;
-    font-weight: 600;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 header p {
-    color: #cbd5e1;
-    margin-top: 5px;
+    color: #94a3b8;
+    margin: 6px 0 16px;
+    font-size: 0.95rem;
 }
 
 .menu {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
 .menu a {
-    color: #f8fafc;
+    color: #e2e8f0;
     text-decoration: none;
-    background-color: #334155;
+    background-color: #1e293b;
     padding: 8px 16px;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 0.9rem;
-    transition: background-color 0.2s;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid #334155;
 }
 
 .menu a:hover {
-    background-color: #475569;
+    background-color: #334155;
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
+.btn-menu-highlight {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-menu-highlight:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Layout Principal */
 main {
-    max-width: 850px;
+    max-width: 900px;
     margin: 30px auto;
-    padding: 0 15px;
+    padding: 0 16px;
 }
 
 .card {
     background: #ffffff;
-    padding: 25px 30px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     border: 1px solid #e2e8f0;
 }
 
 .card h2 {
     color: #0f172a;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 12px;
     margin-top: 0;
+    font-size: 1.5rem;
 }
 
+/* Banner de Destaque / Hero */
+.hero-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+}
+
+.hero-card h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.hero-card p {
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 10px auto 25px;
+}
+
+.btn-cta-principal {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+.btn-cta-principal:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+}
+
+/* Imagens e Galeria */
 .img-destaque {
     width: 100%;
-    height: 350px;
+    height: 380px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
     margin: 15px 0;
 }
 
-.lista-pilares li {
-    margin-bottom: 12px;
-}
-
-/* Grid das Cidades */
-.grid-cidades {
+.galeria-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
-.cidade-box {
-    background: #f8fafc;
-    padding: 15px;
+.galeria-item {
+    position: relative;
     border-radius: 8px;
-    border-left: 4px solid #64748b;
+    overflow: hidden;
+    background: #0f172a;
 }
 
-.cidade-box h3 {
+.galeria-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.galeria-item span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.85);
+    color: white;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Grids e Blocos */
+.grid-pilares, .grid-cidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.pilar-box, .cidade-box {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pilar-box:hover, .cidade-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+.pilar-box h3, .cidade-box h3 {
     margin-top: 0;
-    color: #334155;
+    color: #2563eb;
+    font-size: 1.1rem;
 }
 
-/* Formulário e Quiz */
-.campo-grupo {
+/* Modal Flutuante (Quiz) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hidden {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-content {
+    background: white;
+    width: 100%;
+    max-width: 650px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    animation: modalEntrada 0.3s ease forwards;
+}
+
+@keyframes modalEntrada {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.btn-fechar:hover {
+    color: #0f172a;
+}
+
+.subtitulo-modal {
+    color: #64748b;
     margin-bottom: 20px;
 }
 
-.campo-grupo label {
-    display: block;
-    margin-bottom: 8px;
+.campo-grupo {
+    margin-bottom: 25px;
 }
 
 .campo-grupo input[type="text"] {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-.lista-perguntas {
-    background-color: #f8fafc;
-    padding: 20px 20px 20px 40px;
+    padding: 12px;
+    border: 2px solid #cbd5e1;
     border-radius: 8px;
-    border: 1px solid #e2e8f0;
-}
-
-.lista-perguntas li {
-    margin-bottom: 10px;
-}
-
-.respostas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.pergunta-item {
-    background: #f1f5f9;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-}
-
-button#btnCalcular {
-    width: 100%;
-    background-color: #334155;
-    color: white;
-    border: none;
-    padding: 14px;
     font-size: 1rem;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s;
+    outline: none;
+    transition: border-color 0.2s;
 }
 
-button#btnCalcular:hover {
-    background-color: #1e293b;
+.campo-grupo input[type="text"]:focus {
+    border-color: #2563eb;
+}
+
+/* Estilização das Perguntas e Botões Grandes de Sim/Não */
+.card-pergunta {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-pergunta p {
+    margin: 0 0 12px 0;
+    font-weight: 600;
+    color: #334155;
+}
+
+.btn-opcao-group {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-opcao {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    background-color: #ffffff;
+    color: #475569;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn-opcao:hover {
+    border-color: #94a3b8;
+    background-color: #f1f5f9;
+}
+
+/* Estados Selecionados para Sim e Não */
+.btn-opcao.sim-ativo {
+    background-color: #16a34a;
+    border-color: #16a34a;
+    color: white;
+    box-shadow: 0 4px 10px rgba(22, 163, 74, 0.3);
+    transform: scale(1.02);
+}
+
+.btn-opcao.nao-ativo {
+    background-color: #dc2626;
+    border-color: #dc2626;
+    color: white;
+    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+    transform: scale(1.02);
 }
 
 /* Caixa de Resultado */
 .resultado-box {
-    margin-top: 25px;
+    margin-top: 20px;
     padding: 20px;
-    border-radius: 8px;
-    background-color: #f8fafc;
-    border-left: 5px solid #334155;
+    border-radius: 10px;
+    background-color: #eff6ff;
+    border-left: 5px solid #2563eb;
 }
 
 .resultado-box.hidden {
@@ -181,7 +371,7 @@ button#btnCalcular:hover {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     color: #64748b;
     font-size: 0.85rem;
 }
