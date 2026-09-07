@@ -3,176 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataforma Cidades Inteligentes & Singapura</title>
+    <title>Plataforma Cidades Inteligentes - Foco Singapura</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
     <header>
         <div class="header-top">
-            <h1>🏙️ Cidades Inteligentes</h1>
-            <p>Inovação, tecnologia, cultura e design urbano do futuro</p>
+            <div class="logo-area">
+                <span class="flag-icon">🇸🇬</span>
+                <h1>Smart City: Singapura & O Futuro Urbano</h1>
+            </div>
+            <p>Plataforma interativa de dados, cultura, tecnologia e soluções urbanas</p>
         </div>
         
+        <!-- Barra de Pesquisa Geral -->
         <div class="search-container">
-            <input type="text" id="inputPesquisa" placeholder="🔍 Buscar no site (ex: chiclete, IoT, transporte, cultura, 5G)...">
+            <input type="text" id="inputPesquisa" placeholder="🔍 Pesquisar em todo o site (ex: agricultura, PIB, chiclete, IoT)...">
         </div>
 
-        <nav class="menu">
-            <a href="#proposta">Proposta</a>
-            <a href="#curiosidades">Curiosidades & Cultura</a>
-            <a href="#areas">Áreas Temáticas</a>
-            <a href="#mapa-mental">Mapa Mental</a>
-            <a href="#exemplos">Cidades Globais</a>
-            <a href="#participe">Enquete</a>
-            <button id="btnAbrirQuizHeader" class="btn-menu-highlight">Avaliar Minha Cidade</button>
+        <!-- Abas Principais do Site -->
+        <nav class="main-tabs">
+            <button class="nav-tab active" data-target="tab-inicio">🏠 Proposta & Início</button>
+            <button class="nav-tab" data-target="tab-singapura">🇸🇬 Singapura Detalhada</button>
+            <button class="nav-tab" data-target="tab-tecnologias">📡 Tecnologias & Abas</button>
+            <button class="nav-tab" data-target="tab-mapa">🧠 Mapa Mental</button>
+            <button class="nav-tab" data-target="tab-interativo">📋 Quiz & Enquete</button>
+            <button class="nav-tab" data-target="tab-links">🔗 Links & Fontes</button>
         </nav>
     </header>
 
     <main>
-        <!-- Proposta Direta do Projeto -->
-        <section id="proposta" class="card hero-card searchable">
-            <div class="proposta-badge">PROPOSTA DO PROJETO</div>
-            <h2>O Que É Este Site?</h2>
-            <p class="proposta-texto">
-                Esta plataforma foi criada para apresentar como a <strong>tecnologia, a sustentabilidade e o design urbano</strong> se unem para transformar metrópoles no mundo todo. Usando <strong>Singapura</strong> como o principal modelo global, o site conecta dados de Smart Cities, interatividade, mapa mental e uma avaliação prática para testar o nível de inteligência da sua própria cidade.
-            </p>
-            
-            <div class="stats-grid">
-                <div class="stat-card"><span class="stat-number">-30%</span><span class="stat-label">🌱 Emissões CO₂</span></div>
-                <div class="stat-card"><span class="stat-number">+45%</span><span class="stat-label">🚍 Mobilidade</span></div>
-                <div class="stat-card"><span class="stat-number">40%</span><span class="stat-label">💡 Economia Energia</span></div>
-                <div class="stat-card"><span class="stat-number">5G</span><span class="stat-label">📡 Conectividade</span></div>
-            </div>
-
-            <button id="btnAbrirQuizHero" class="btn-cta-principal">Testar Maturidade da Minha Cidade</button>
-        </section>
-
-        <!-- NOVO: Curiosidades, Cultura e Design de Singapura -->
-        <section id="curiosidades" class="card searchable">
-            <h2>✨ Curiosidades, Cultura & Design de Singapura</h2>
-            <p>Singapura não é só tecnologia: é um caldeirão cultural com um design urbano pensado nos mínimos detalhes.</p>
-
-            <div class="grid-curiosidades">
-                <div class="curiosidade-card">
-                    <span class="emoji-icon">🚫🍬</span>
-                    <h3>Chiclete é Proibido!</h3>
-                    <p>Para manter o design da cidade impecável e os sensores de portas dos trens limpos, a venda e importação de chicletes é proibida desde 1992.</p>
-                </div>
-
-                <div class="curiosidade-card">
-                    <span class="emoji-icon">🌳🏙️</span>
-                    <h3>Cidade em um Jardim</h3>
-                    <p>O design arquitetônico obriga novos edifícios a reintroduzirem na fachada a mesma quantidade de vegetação que ocupam no solo.</p>
-                </div>
-
-                <div class="curiosidade-card">
-                    <span class="emoji-icon">🏮🕌</span>
-                    <h3>Mosaico Cultural</h3>
-                    <p>Uma mistura vibrante de culturas chinesa, malaia, indiana e euro-asiática. Bairros como <em>Chinatown</em>, <em>Little India</em> e <em>Kampong Glam</em> coexistem com arranha-céus futuristas.</p>
-                </div>
-
-                <div class="curiosidade-card">
-                    <span class="emoji-icon">✈️💦</span>
-                    <h3>O Melhor Aeroporto do Mundo</h3>
-                    <p>O aeroporto Jewel Changi conta com a maior cachoeira interna do mundo (40m de altura) cercada por uma floresta tropical coberta.</p>
+        <!-- ABA 1: PROPOSTA & INÍCIO -->
+        <section id="tab-inicio" class="site-page active searchable">
+            <div class="hero-card">
+                <span class="badge">PROPOSTA DO PROJETO</span>
+                <h2>Transformação Urbana e Tecnológica</h2>
+                <p>
+                    Esta plataforma foi desenvolvida para mapear, analisar e apresentar as principais inovações em **Cidades Inteligentes (Smart Cities)**, utilizando **Singapura** como o estudo de caso central. Aqui você encontra dados econômicos, culturais, agrícolas e de infraestrutura, além de ferramentas interativas para avaliar a maturidade digital da sua própria cidade.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-card"><span class="stat-number">5.9M</span><span class="stat-label">Habitantes em Singapura</span></div>
+                    <div class="stat-card"><span class="stat-number">728 km²</span><span class="stat-label">Área Territorial Total</span></div>
+                    <div class="stat-card"><span class="stat-number">1º Lugar</span><span class="stat-label">Rank Global Smart Cities (IMD)</span></div>
+                    <div class="stat-card"><span class="stat-number">30 por 30</span><span class="stat-label">Meta de Autossuficiência Agrícola</span></div>
                 </div>
             </div>
         </section>
 
-        <!-- Áreas com Abas -->
-        <section id="areas" class="card searchable">
-            <h2>🚦 Áreas de Aplicação Urbana</h2>
-            
-            <div class="tabs-header">
-                <button type="button" class="tab-btn active" data-aba="tab-mobilidade">🚗 Mobilidade</button>
-                <button type="button" class="tab-btn" data-aba="tab-meio-ambiente">🌱 Meio Ambiente</button>
-                <button type="button" class="tab-btn" data-aba="tab-energia">💡 Energia</button>
-                <button type="button" class="tab-btn" data-aba="tab-governo">🏛️ Governo Digital</button>
+        <!-- ABA 2: SINGAPURA DETALHADA -->
+        <section id="tab-singapura" class="site-page searchable">
+            <h2>🇸🇬 Estudo Detalhado: Singapura</h2>
+            <p>Selecione um tópico abaixo para alterar as informações da pesquisa sobre a cidade-estado:</p>
+
+            <!-- Botões de Troca de Conteúdo de Singapura -->
+            <div class="sub-filter-buttons">
+                <button class="btn-subfilter active" onclick="mostrarConteudoSingapura('cultura')">🎭 Cultura & Sociedade</button>
+                <button class="btn-subfilter" onclick="mostrarConteudoSingapura('economia')">📈 Economia & Dados</button>
+                <button class="btn-subfilter" onclick="mostrarConteudoSingapura('agricultura')">🌾 Agricultura Vertical</button>
+                <button class="btn-subfilter" onclick="mostrarConteudoSingapura('curiosidades')">💡 Curiosidades & Leis</button>
             </div>
 
-            <div id="tab-mobilidade" class="tab-content active">
+            <!-- Conteúdos Dinâmicos de Singapura -->
+            <div id="singapura-cultura" class="singapura-box active">
+                <h3>🎭 Cultura Expansiva e Mosaico Multiétnico</h3>
+                <p>Singapura é marcada pela coexistência harmoniosa de quatro grandes grupos comunitários: Chineses, Malaios, Indianos e Euro-asiáticos. A cultura reflete a diversidade através do idioma 'Singlish' e da gastronomia única dos famosos <em>Hawker Centres</em> (mercados de comida de rua declarados Patrimônio Imaterial da Humanidade pela UNESCO).</p>
+                <div class="image-gallery">
+                    <div class="img-card">
+                        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80" alt="Marina Bay Sands e Singapura">
+                        <p>Arquitetura Icônica e Marina Bay</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="singapura-economia" class="singapura-box hidden">
+                <h3>📈 Economia e Hub Financeiro Mundial</h3>
+                <p>Mesmo sem recursos naturais substanciais, Singapura tornou-se um dos centros financeiros mais influentes do mundo. Possui o 2º maior porto de contêineres do planeta e investiu pesado no programa <strong>Smart Nation</strong>, digitalizando 99% dos serviços públicos por meio da plataforma SingPass.</p>
+                <ul>
+                    <li><strong>PIB Per Capita:</strong> Entre os 5 maiores do mundo (superior a US$ 80.000).</li>
+                    <li><strong>Gêmeo Digital (Virtual Singapore):</strong> Modelo 3D completo da cidade alimentado por dados de sensores em tempo real para simular rajadas de vento, sombras e tráfego.</li>
+                </ul>
+            </div>
+
+            <div id="singapura-agricultura" class="singapura-box hidden">
+                <h3>🌾 Agricultura de Alta Tecnologia e Plano "30 por 30"</h3>
+                <p>Com menos de 1% de terras disponíveis para cultivo tradicional, Singapura desenvolveu fazendas verticais de ambiente controlado e sistemas de aquaponificação em telhados de prédios. O objetivo do plano "30 por 30" é produzir 30% das necessidades nutricionais do país localmente até o ano de 2030.</p>
+                <div class="image-gallery">
+                    <div class="img-card">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Tecnologia e Sensores">
+                        <p>Sistemas de Controle e Sensores Agrícolas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="singapura-curiosidades" class="singapura-box hidden">
+                <h3>💡 Curiosidades e Design Urbano Único</h3>
+                <div class="curiosidades-grid">
+                    <div class="curio-card">
+                        <h4>🚫 Proibição do Chiclete</h4>
+                        <p>A venda e importação foram proibidas em 1992 para evitar que o chiclete colado atrapalhasse as portas automáticas dos trens urbanos (MRT).</p>
+                    </div>
+                    <div class="curio-card">
+                        <h4>🌳 Gardens by the Bay</h4>
+                        <p>Superestruturas em forma de árvores gigantes (Supertrees) de até 50 metros capturam água da chuva e geram energia solar para o parque.</p>
+                    </div>
+                    <div class="curio-card">
+                        <h4>💧 Água Reutilizada (NEWater)</h4>
+                        <p>Através de microfiltração e osmose reversa, o país transforma e purifica águas residuais em água potável de alta pureza.</p>
+                    </div>
+                </div>
+                <div class="image-gallery" style="margin-top: 15px;">
+                    <div class="img-card">
+                        <img src="https://images.unsplash.com/photo-1509017174183-0b7e0278f1ec?auto=format&fit=crop&w=800&q=80" alt="Gardens by the Bay">
+                        <p>Superestruturas Verdes em Gardens by the Bay</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 3: TECNOLOGIAS & ABAS INTERNAS -->
+        <section id="tab-tecnologias" class="site-page searchable">
+            <h2>🚦 Áreas Temáticas de Aplicação</h2>
+            <p>Clique nas abas internas para alternar entre as vertentes de infraestrutura:</p>
+
+            <div class="inner-tabs-header">
+                <button class="inner-tab-btn active" data-inner="inner-mobilidade">🚗 Mobilidade</button>
+                <button class="inner-tab-btn" data-inner="inner-ambiente">🌱 Meio Ambiente</button>
+                <button class="inner-tab-btn" data-inner="inner-energia">💡 Energia</button>
+            </div>
+
+            <div id="inner-mobilidade" class="inner-tab-content active">
                 <h3>Mobilidade Inteligente</h3>
-                <p>Semáforos adaptativos por IA, transporte público integrado com GPS em tempo real, aplicativos de rotas e redes de bicicletas compartilhadas.</p>
+                <p>Taxação eletrônica de vias em tempo real (ERP), semáforos orientados por Inteligência Artificial e frotas de veículos autônomos em testes.</p>
             </div>
 
-            <div id="tab-meio-ambiente" class="tab-content">
-                <h3>Meio Ambiente & Sustentabilidade</h3>
-                <p>Monitoramento da qualidade do ar, lixeiras inteligentes com sensores de nível e tratamento avançado de águas residuais (NEWater).</p>
+            <div id="inner-ambiente" class="inner-tab-content">
+                <h3>Gestão Ambiental</h3>
+                <p>Sensores instalados em lixeiras públicas que avisam a central quando estão cheias, otimizando as rotas dos caminhões de lixo.</p>
             </div>
 
-            <div id="tab-energia" class="tab-content">
-                <h3>Energia Limpa & Iluminação</h3>
-                <p>Postes de LED automatizados, redes de distribuição Smart Grid e expansão de energia solar em prédios públicos.</p>
-            </div>
-
-            <div id="tab-governo" class="tab-content">
-                <h3>Governança & Serviços Digitais</h3>
-                <p>Portais de transparência, emissão de alvarás e documentos 100% online (Singpass) e aplicativos para cidadãos.</p>
+            <div id="inner-energia" class="inner-tab-content">
+                <h3>Energia & Redes Inteligentes</h3>
+                <p>Smart Grids de distribuição de energia e postes de iluminação pública adaptativos que regulam o brilho com base na presença de pedestres.</p>
             </div>
         </section>
 
-        <!-- Mapa Mental Interativo -->
-        <section id="mapa-mental" class="card searchable">
+        <!-- ABA 4: MAPA MENTAL -->
+        <section id="tab-mapa" class="site-page searchable">
             <h2>🧠 Mapa Mental Interativo</h2>
-            <p>Clique nos botões abaixo para ver os pilares e o design das soluções:</p>
+            <p>Clique nos ramos do mapa para abrir as explicações e imagens correspondentes:</p>
+
+            <div class="mapa-wrapper">
+                <div class="node-root">SMART CITIES</div>
+                <div class="branches">
+                    <button class="branch-btn" onclick="carregarMapa('Tecnologia', 'Sensores IoT, redes 5G e processamento de Big Data.', 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80')">📱 Tecnologia</button>
+                    <button class="branch-btn" onclick="carregarMapa('Sustentabilidade', 'Energia limpa, jardins verticais e gestão hídrica.', 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80')">🌱 Sustentabilidade</button>
+                    <button class="branch-btn" onclick="carregarMapa('Mobilidade', 'Transporte público autônomo, otimizado por dados.', 'https://images.unsplash.com/photo-1509017174183-0b7e0278f1ec?auto=format&fit=crop&w=800&q=80')">🚌 Mobilidade</button>
+                </div>
+
+                <div id="mapaDisplay" class="mapa-display-box">
+                    <h4 id="mapaTitulo">Selecione um ramo acima</h4>
+                    <p id="mapaDescricao">O conteúdo detalhado com imagem será carregado nesta área.</p>
+                    <img id="mapaImagem" src="" alt="Imagem explicativa" class="mapa-img hidden">
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 5: QUIZ & ENQUETE -->
+        <section id="tab-interativo" class="site-page searchable">
+            <h2>📋 Avaliação e Enquete Urbana</h2>
             
-            <div class="mapa-mental-container">
-                <div class="no-central">SMART CITIES</div>
-                <div class="linhas-conexao">
-                    <button type="button" class="no-ramo" onclick="atualizarMapa('Tecnologia & Conectividade', 'Uso de IoT, redes 5G e Big Data para automatizar a infraestrutura.', 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80')">📱 Tecnologia</button>
-                    <button type="button" class="no-ramo" onclick="atualizarMapa('Sustentabilidade & Design', 'Arquitetura biofílica com jardins verticais e reuso de água.', 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=600&q=80')">🌱 Sustentabilidade</button>
-                    <button type="button" class="no-ramo" onclick="atualizarMapa('Mobilidade Integrada', 'Transporte público rápido, autônomo e sem fios expostos.', 'https://images.unsplash.com/photo-1509017174183-0b7e0278f1ec?auto=format&fit=crop&w=600&q=80')">🚌 Mobilidade</button>
+            <div class="quiz-container">
+                <h3>Avalie a Maturidade da Sua Cidade</h3>
+                <div class="form-group">
+                    <label for="nomeCidade"><strong>Digite o nome da sua cidade:</strong></label>
+                    <input type="text" id="nomeCidade" placeholder="Ex: São Paulo, Rio de Janeiro, Curitiba...">
                 </div>
-                
-                <div id="infoMapa" class="info-mapa-box">
-                    <h4 id="mapaTitulo">Selecione um pilar</h4>
-                    <p id="mapaTexto">Clique em um dos botões acima para ver os detalhes e a imagem explicativa.</p>
-                    <img id="mapaImagem" src="" alt="Imagem do Mapa Mental" class="mapa-img hidden">
+
+                <div id="listaPerguntas"></div>
+                <div id="resultadoQuiz" class="resultado-box hidden"></div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="enquete-block">
+                <h3>Votação Popular</h3>
+                <p>Qual prioridade deveria receber mais investimento na sua região?</p>
+                <div class="enquete-btns">
+                    <button class="btn-voto" onclick="votar('Transporte Conectado com GPS')">🚌 Transporte Conectado</button>
+                    <button class="btn-voto" onclick="votar('Arquitetura Verde e Fazendas Verticais')">🌳 Fazendas Verticais e Parques</button>
+                    <button class="btn-voto" onclick="votar('Segurança por Câmeras e IA')">🛡️ Segurança Digital</button>
                 </div>
+                <div id="resultadoEnquete" class="resultado-box hidden"></div>
             </div>
         </section>
 
-        <!-- Cidades Globais -->
-        <section id="exemplos" class="card searchable">
-            <h2>🌎 Cidades Globais em Destaque</h2>
-            <div class="grid-cidades">
-                <div class="cidade-box"><h3>🇸🇬 Singapura</h3><p>Gêmeo digital 3D e integração verde impressionante.</p></div>
-                <div class="cidade-box"><h3>🇧🇷 Curitiba</h3><p>Pioneira no modelo BRT e sustentabilidade urbana no Brasil.</p></div>
-                <div class="cidade-box"><h3>🇪🇸 Barcelona</h3><p>Superquadras para pedestres e iluminação conectada.</p></div>
-                <div class="cidade-box"><h3>🇳🇱 Amsterdã</h3><p>Design voltado para bicicletas e geração limpa de energia.</p></div>
-            </div>
-        </section>
+        <!-- ABA 6: LINKS & FONTES RECOMENDADAS -->
+        <section id="tab-links" class="site-page searchable">
+            <h2>🔗 Links Externos e Portais Oficiais</h2>
+            <p>Acesse conteúdos e pesquisas oficiais sobre Smart Cities e o projeto Smart Nation:</p>
 
-        <!-- Enquete -->
-        <section id="participe" class="card searchable">
-            <h2>👥 Participação Popular</h2>
-            <p>O que traria o maior salto de qualidade para sua cidade hoje?</p>
-            <div class="enquete-container">
-                <button type="button" class="btn-voto" onclick="votar('Transporte Público e Conectado')">🚌 Transporte Conectado</button>
-                <button type="button" class="btn-voto" onclick="votar('Mais Áreas Verdes e Arquitetura Biofílica')">🌳 Design Verde & Parques</button>
-                <button type="button" class="btn-voto" onclick="votar('Segurança com Sensores e LED')">🛡️ Segurança Digital</button>
+            <div class="links-grid">
+                <a href="https://www.smartnation.gov.sg" target="_blank" class="link-card">
+                    <h4>🌐 Smart Nation Singapore (Oficial)</h4>
+                    <p>Portal oficial do governo de Singapura com detalhes de todos os projetos tecnológicos ativos.</p>
+                </a>
+                <a href="https://www.imd.org/smart-city-observatory/smart-city-index/" target="_blank" class="link-card">
+                    <h4>📊 IMD Smart City Index</h4>
+                    <p>Ranking mundial anual das cidades mais inteligentes do mundo.</p>
+                </a>
+                <a href="https://www.gardensbythebay.com.sg" target="_blank" class="link-card">
+                    <h4>🌳 Gardens by the Bay</h4>
+                    <p>Conheça o projeto de arquitetura sustentável e botânica de Singapura.</p>
+                </a>
             </div>
-            <div id="resultadoEnquete" class="resultado-enquete-box hidden"></div>
         </section>
     </main>
 
-    <!-- Modal Quiz -->
-    <div id="quizModal" class="modal-overlay hidden">
-        <div class="modal-content">
-            <button id="btnFecharModal" class="btn-fechar">&times;</button>
-            <h2>Avaliação de Maturidade Urbana</h2>
-            <div class="campo-grupo">
-                <label for="nomeCidade"><strong>Nome da sua cidade:</strong></label>
-                <input type="text" id="nomeCidade" placeholder="Ex: São Paulo, Lisboa, Curitiba...">
-            </div>
-            <div id="perguntasContainer"></div>
-            <div id="resultado" class="resultado-box hidden"></div>
-        </div>
-    </div>
-
     <footer>
-        <p>Projeto Cidades Inteligentes & Singapura &copy; 2026</p>
+        <p>Projeto Smart Cities & Singapura &copy; 2026</p>
     </footer>
 
     <script src="script.js"></script>
