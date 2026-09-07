@@ -1,19 +1,50 @@
-// Lista de Perguntas do Quiz
+// 1. Lógica da Barra de Pesquisa em Tempo Real
+document.getElementById('inputPesquisa').addEventListener('input', function(e) {
+    const termo = e.target.value.toLowerCase().trim();
+    const secoes = document.querySelectorAll('.searchable');
+
+    secoes.forEach(secao => {
+        const texto = secao.innerText.toLowerCase();
+        if (texto.includes(termo)) {
+            secao.style.display = 'block';
+        } else {
+            secao.style.display = 'none';
+        }
+    });
+});
+
+// 2. Lógica da Troca de Abas
+function abrirAba(evt, idAba) {
+    const conteudos = document.querySelectorAll('.tab-content');
+    conteudos.forEach(c => c.classList.remove('active'));
+
+    const botoes = document.querySelectorAll('.tab-btn');
+    botoes.forEach(b => b.classList.remove('active'));
+
+    document.getElementById(idAba).classList.add('active');
+    evt.currentTarget.classList.add('active');
+}
+
+// 3. Lógica do Mapa Mental
+function mostrarInfoMapa(titulo, descricao) {
+    const box = document.getElementById('infoMapa');
+    box.innerHTML = `<strong>${titulo}:</strong> ${descricao}`;
+}
+
+// 4. Lógica do Quiz / Modal
 const perguntas = [
-    "Sua cidade possui aplicativo público funcional para solicitar serviços e fazer denúncias urbanas?",
-    "O transporte público conta com rastreamento GPS em tempo real disponível para os cidadãos?",
-    "Existem semáforos inteligentes ou monitoramento de tráfego integrado por câmeras/IA?",
-    "Há coleta seletiva organizada e abrangente na maior parte da cidade?",
-    "A cidade conta com sensores digitais de monitoramento de enchentes ou riscos climáticos?",
-    "Existem pontos de Wi-Fi público gratuito nas principais praças ou estações?",
+    "Sua cidade possui aplicativo público funcional para solicitar serviços?",
+    "O transporte público conta com rastreamento GPS em tempo real?",
+    "Existem semáforos inteligentes ou monitoramento de tráfego por IA?",
+    "Há coleta seletiva organizada na maior parte da cidade?",
+    "A cidade conta com sensores de monitoramento de enchentes?",
+    "Existem pontos de Wi-Fi público gratuito nas principais praças?",
     "A iluminação pública utiliza tecnologia LED automatizada?",
-    "A prefeitura permite emitir certidões e alvarás 100% online sem burocracia presencial?"
+    "A prefeitura permite emitir alvarás 100% online sem burocracia?"
 ];
 
-// Estado das Respostas (0 para não respondido, 1 para Sim, -1 para Não)
 let respostas = new Array(perguntas.length).fill(0);
 
-// Elementos da Interface
 const modal = document.getElementById('quizModal');
 const btnAbrirHeader = document.getElementById('btnAbrirQuizHeader');
 const btnAbrirHero = document.getElementById('btnAbrirQuizHero');
@@ -21,63 +52,41 @@ const btnFechar = document.getElementById('btnFecharModal');
 const perguntasContainer = document.getElementById('perguntasContainer');
 const resultadoDiv = document.getElementById('resultado');
 
-// Funções para Abrir e Fechar Modal
-function abrirModal() {
-    modal.classList.remove('hidden');
-}
+btnAbrirHeader.addEventListener('click', () => modal.classList.remove('hidden'));
+btnAbrirHero.addEventListener('click', () => modal.classList.remove('hidden'));
+btnFechar.addEventListener('click', () => modal.classList.add('hidden'));
 
-function fecharModal() {
-    modal.classList.add('hidden');
-}
-
-btnAbrirHeader.addEventListener('click', abrirModal);
-btnAbrirHero.addEventListener('click', abrirModal);
-btnFechar.addEventListener('click', fecharModal);
-
-// Renderizar Perguntas com Botões Animados de Sim e Não
 function carregarPerguntas() {
     perguntasContainer.innerHTML = '';
-    
     perguntas.forEach((pergunta, index) => {
         const card = document.createElement('div');
         card.className = 'card-pergunta';
-        
         card.innerHTML = `
             <p>${index + 1}. ${pergunta}</p>
             <div class="btn-opcao-group">
-                <button type="button" class="btn-opcao btn-sim" onclick="selecionarOpcao(${index}, 1, this)">Sim</button>
-                <button type="button" class="btn-opcao btn-nao" onclick="selecionarOpcao(${index}, -1, this)">Não</button>
+                <button type="button" class="btn-opcao" onclick="selecionarOpcao(${index}, 1, this)">Sim</button>
+                <button type="button" class="btn-opcao" onclick="selecionarOpcao(${index}, -1, this)">Não</button>
             </div>
         `;
-        
         perguntasContainer.appendChild(card);
     });
 }
 
-// Função ao clicar em Sim ou Não
 window.selecionarOpcao = function(index, valor, elemento) {
     const pai = elemento.parentElement;
-    const botoes = pai.querySelectorAll('.btn-opcao');
+    pai.querySelectorAll('.btn-opcao').forEach(b => b.classList.remove('sim-ativo', 'nao-ativo'));
     
-    // Reseta classes do grupo
-    botoes.forEach(b => b.classList.remove('sim-ativo', 'nao-ativo'));
-    
-    if (valor === 1) {
-        elemento.classList.add('sim-ativo');
-    } else {
-        elemento.classList.add('nao-ativo');
-    }
+    if (valor === 1) elemento.classList.add('sim-ativo');
+    else elemento.classList.add('nao-ativo');
     
     respostas[index] = valor;
     calcularResultado();
 };
 
-// Função de Cálculo Automático do Diagnóstico
 function calcularResultado() {
     const nomeCidade = document.getElementById('nomeCidade').value.trim();
     const respondidas = respostas.filter(r => r !== 0).length;
     
-    // Só calcula o resultado completo se responder todas as perguntas e informar o nome
     if (respondidas < perguntas.length || !nomeCidade) {
         resultadoDiv.classList.add('hidden');
         return;
@@ -87,23 +96,16 @@ function calcularResultado() {
     resultadoDiv.classList.remove('hidden');
 
     let diagnostico = "";
-
     if (pontos >= 7) {
-        diagnostico = `A cidade de <strong>${nomeCidade}</strong> atingiu a impressionante marca de <strong>${pontos}/8 pontos</strong>! Ela apresenta padrões internacionais avançados de Smart City, destacando-se na integração tecnológica, inovação contínua e qualidade de vida para os cidadãos.`;
+        diagnostico = `A cidade de <strong>${nomeCidade}</strong> atingiu a marca de <strong>${pontos}/8 pontos</strong>! Padrão avançado de Smart City.`;
     } else if (pontos >= 4) {
-        diagnostico = `A cidade de <strong>${nomeCidade}</strong> somou <strong>${pontos}/8 pontos</strong>. Ela já percorreu um caminho importante de modernização urbana, mas ainda precisa evoluir em pontos cruciais (como maior presença de sensores digitais ou automação avançada) para alcançar o nível de cidades como Singapura ou Barcelona.`;
+        diagnostico = `A cidade de <strong>${nomeCidade}</strong> somou <strong>${pontos}/8 pontos</strong>. Está em um bom caminho de modernização.`;
     } else {
-        diagnostico = `A cidade de <strong>${nomeCidade}</strong> obteve <strong>${pontos}/8 pontos</strong>. Ela ainda se encontra em estágios iniciais de transição digital. Faltam investimentos em infraestrutura inteligente, desburocratização e tecnologias focadas na sustentabilidade.`;
+        diagnostico = `A cidade de <strong>${nomeCidade}</strong> obteve <strong>${pontos}/8 pontos</strong>. Ainda se encontra no estágio inicial de transição digital.`;
     }
 
-    resultadoDiv.innerHTML = `
-        <h3>Diagnóstico de ${nomeCidade}</h3>
-        <p>${diagnostico}</p>
-    `;
+    resultadoDiv.innerHTML = `<h3>Diagnóstico de ${nomeCidade}</h3><p>${diagnostico}</p>`;
 }
 
-// Atualiza o resultado em tempo real caso a pessoa digite o nome depois de ter marcado as opções
 document.getElementById('nomeCidade').addEventListener('input', calcularResultado);
-
-// Inicializa a lista de perguntas
 carregarPerguntas();
